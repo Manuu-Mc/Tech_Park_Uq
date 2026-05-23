@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>co.edu.uniquindio.poo</groupId>
-    <artifactId>Tech_Park_Uq</artifactId>
+    <artifactId>TechParkUq</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Tech_Park_Uq</name>
+    <name>TechParkUq</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                co.edu.uniquindio.poo.tech_park_uq/co.edu.uniquindio.poo.tech_park_uq.HelloApplication
+                                co.edu.uniquindio.poo.techparkuq/co.edu.uniquindio.poo.techparkuq.view.MainApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
