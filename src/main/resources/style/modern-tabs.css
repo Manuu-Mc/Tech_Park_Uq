@@ -1,0 +1,170 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ESTILOS MODERNOS PARA TABPANE - Tech Park UQ
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Contenedor principal del TabPane */
+.tab-pane {
+    -fx-background-color: #FAFAFA;
+    -fx-tab-min-height: 50px;
+    -fx-tab-max-height: 50px;
+}
+
+/* Área donde se muestran las pestañas */
+.tab-pane .tab-header-area {
+    -fx-background-color: white;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: white;
+}
+
+/* Contenedor de las pestañas */
+.tab-pane .headers-region {
+    -fx-background-color: white;
+}
+
+/* Estilo de cada pestaña individual */
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: transparent;
+    -fx-padding: 12 25 12 25;
+}
+
+/* Pestaña al pasar el mouse */
+.tab-pane .tab:hover {
+    -fx-background-color: rgba(69, 39, 160, 0.05);
+    -fx-cursor: hand;
+}
+
+/* Pestaña seleccionada */
+.tab-pane .tab:selected {
+    -fx-background-color: rgba(69, 39, 160, 0.08);
+    -fx-border-color: #4527A0;
+}
+
+/* Etiqueta de texto de la pestaña */
+.tab-pane .tab .tab-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #666;
+    -fx-alignment: center;
+}
+
+/* Texto de pestaña seleccionada */
+.tab-pane .tab:selected .tab-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #4527A0;
+}
+
+/* Texto de pestaña al hover */
+.tab-pane .tab:hover .tab-label {
+    -fx-text-fill: #4527A0;
+}
+
+/* Contenido de las pestañas */
+.tab-pane .tab-content-area {
+    -fx-background-color: #FAFAFA;
+    -fx-padding: 0;
+}
+
+/* Eliminar el foco visual */
+.tab-pane:focused .tab:selected {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Botón de cierre de pestaña (si está habilitado) */
+.tab-pane .tab .tab-close-button {
+    -fx-background-color: #999;
+    -fx-shape: "M 0,0 H1 L 4,3 7,0 H8 V1 L 5,4 8,7 V8 H7 L 4,5 1,8 H0 V7 L 3,4 0,1 Z";
+}
+
+.tab-pane .tab:hover .tab-close-button {
+    -fx-background-color: #C62828;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ESTILOS PARA COMBOBOX (DESPLEGABLES)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ComboBox principal */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #BDBDBD;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.combo-box:hover {
+    -fx-border-color: #4527A0;
+}
+
+.combo-box:focused {
+    -fx-border-color: #4527A0;
+    -fx-border-width: 2;
+}
+
+/* Área de texto del ComboBox */
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+    -fx-padding: 6 10;
+}
+
+/* Flecha del ComboBox */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 8;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #666;
+}
+
+.combo-box:hover .arrow {
+    -fx-background-color: #4527A0;
+}
+
+/* Lista desplegable del ComboBox */
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #BDBDBD;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);
+}
+
+/* Items de la lista desplegable */
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+    -fx-padding: 8 12;
+}
+
+/* Item al pasar el mouse */
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: rgba(69, 39, 160, 0.1);
+    -fx-text-fill: #4527A0;
+}
+
+/* Item seleccionado */
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #4527A0;
+    -fx-text-fill: white;
+}
+
+/* Eliminar el color azul por defecto */
+.combo-box-popup .list-view .list-cell:filled:selected:focused,
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #4527A0;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view:focused .list-cell:filled:selected {
+    -fx-background-color: #4527A0;
+    -fx-text-fill: white;
+}
