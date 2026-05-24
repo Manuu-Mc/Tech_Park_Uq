@@ -1,0 +1,458 @@
+{
+  "sistema": "Tech-Park UQ - Sistema de Gestión de Parque de Atracciones",
+  "version": "2.0",
+  "descripcion": "Datos de prueba completos con operadores especializados, atracciones asignadas y visitantes",
+  
+  "operadores": [
+    {
+      "nombre": "Juan Martínez",
+      "cedula": "OP001",
+      "edad": 32,
+      "idEmpleado": "EMP001",
+      "especialidad": "ACUATICA",
+      "zona": "Zona Acuática",
+      "descripcion": "Operador especializado en atracciones acuáticas",
+      "atraccionesAsignadas": [
+        "Tobogán Acuático Extremo",
+        "Piscina de Olas",
+        "Río Rápido (EN MANTENIMIENTO - para pruebas)"
+      ]
+    },
+    {
+      "nombre": "María González",
+      "cedula": "OP002",
+      "edad": 28,
+      "idEmpleado": "EMP002",
+      "especialidad": "MECANICA",
+      "zona": "Zona Mecánica",
+      "descripcion": "Operador especializado en atracciones mecánicas de altura",
+      "atraccionesAsignadas": [
+        "Montaña Rusa Extrema",
+        "Rueda de la Fortuna"
+      ]
+    },
+    {
+      "nombre": "Pedro Ramírez",
+      "cedula": "OP003",
+      "edad": 35,
+      "idEmpleado": "EMP003",
+      "especialidad": "INFANTIL",
+      "zona": "Zona Infantil",
+      "descripcion": "Operador especializado en atracciones infantiles",
+      "atraccionesAsignadas": [
+        "Carrusel Mágico"
+      ]
+    }
+  ],
+  
+  "administradores": [
+    {
+      "nombre": "Carlos Mendoza",
+      "cedula": "ADMIN001",
+      "edad": 45,
+      "idEmpleado": "EMP999",
+      "sueldo": 5000000,
+      "descripcion": "Administrador general del parque",
+      "permisos": [
+        "Gestionar personal (contratar/desvincular operadores)",
+        "Crear y eliminar atracciones",
+        "Asignar operadores a atracciones",
+        "Activar/desactivar alertas climáticas",
+        "Poner atracciones en mantenimiento manual",
+        "Generar reportes diarios",
+        "Cambiar especialidad de operadores"
+      ]
+    }
+  ],
+  
+  "atracciones": [
+    {
+      "id": "ATR001",
+      "nombre": "Tobogán Acuático Extremo",
+      "tipo": "ACUATICA",
+      "capacidad": 15,
+      "alturaMinima": 1.20,
+      "edadMinima": 8,
+      "costoAdicional": 3000,
+      "costoPuntos": 30,
+      "operadorAsignado": "Juan Martínez (EMP001)",
+      "especialidadRequerida": "ACUATICA",
+      "mantenimiento": {
+        "limiteVisitas": 500,
+        "visitasActuales": 0,
+        "descripcion": "Cuando se alcancen 500 visitas, la atracción pasa automáticamente a estado EN_MANTENIMIENTO",
+        "proceso": [
+          "1. Visitante 500 ingresa -> contador = 500",
+          "2. Sistema ejecuta ejecutarMantenimientoAutomatico()",
+          "3. Estado cambia a EN_MANTENIMIENTO",
+          "4. Operador debe registrar revisión técnica",
+          "5. Al registrar revisión: estado = ACTIVA, contador = 0"
+        ],
+        "codigoRelevante": "Atraccion.registrarIngreso() -> ejecutarMantenimientoAutomatico()"
+      }
+    },
+    {
+      "id": "ATR002",
+      "nombre": "Piscina de Olas",
+      "tipo": "ACUATICA",
+      "capacidad": 100,
+      "alturaMinima": 1.00,
+      "edadMinima": 6,
+      "costoAdicional": 1000,
+      "costoPuntos": 30,
+      "operadorAsignado": "Juan Martínez (EMP001)",
+      "especialidadRequerida": "ACUATICA",
+      "mantenimiento": {
+        "limiteVisitas": 500,
+        "visitasActuales": 0
+      }
+    },
+    {
+      "id": "ATR003",
+      "nombre": "Montaña Rusa Extrema",
+      "tipo": "MECANICA_ALTURA",
+      "capacidad": 20,
+      "alturaMinima": 1.40,
+      "edadMinima": 12,
+      "costoAdicional": 5000,
+      "costoPuntos": 50,
+      "operadorAsignado": "María González (EMP002)",
+      "especialidadRequerida": "MECANICA",
+      "mantenimiento": {
+        "limiteVisitas": 500,
+        "visitasActuales": 0
+      }
+    },
+    {
+      "id": "ATR004",
+      "nombre": "Rueda de la Fortuna",
+      "tipo": "MECANICA_ALTURA",
+      "capacidad": 40,
+      "alturaMinima": 1.10,
+      "edadMinima": 5,
+      "costoAdicional": 2000,
+      "costoPuntos": 50,
+      "operadorAsignado": "María González (EMP002)",
+      "especialidadRequerida": "MECANICA",
+      "mantenimiento": {
+        "limiteVisitas": 500,
+        "visitasActuales": 0
+      }
+    },
+    {
+      "id": "ATR005",
+      "nombre": "Carrusel Mágico",
+      "tipo": "INFANTIL",
+      "capacidad": 30,
+      "alturaMinima": 0.90,
+      "edadMinima": 3,
+      "costoAdicional": 0,
+      "costoPuntos": 20,
+      "operadorAsignado": "Pedro Ramírez (EMP003)",
+      "especialidadRequerida": "INFANTIL",
+      "mantenimiento": {
+        "limiteVisitas": 500,
+        "visitasActuales": 0
+      }
+    },
+    {
+      "id": "ATR006",
+      "nombre": "Río Rápido",
+      "tipo": "ACUATICA",
+      "capacidad": 25,
+      "alturaMinima": 1.30,
+      "edadMinima": 10,
+      "costoAdicional": 2500,
+      "costoPuntos": 30,
+      "operadorAsignado": "Juan Martínez (EMP001)",
+      "especialidadRequerida": "ACUATICA",
+      "estadoActual": "EN_MANTENIMIENTO",
+      "mantenimiento": {
+        "limiteVisitas": 500,
+        "visitasActuales": 500,
+        "descripcion": "Esta atracción YA ESTÁ en mantenimiento para que puedas probar la revisión técnica inmediatamente",
+        "pruebaRevisionTecnica": [
+          "1. Login como Operador OP001 (Juan Martínez - Acuática)",
+          "2. Tab 'Mantenimiento'",
+          "3. Ver 'Río Rápido' en la tabla",
+          "4. Seleccionar y click 'Registrar Revisión Técnica'",
+          "5. Estado cambia a ACTIVA, contador = 0",
+          "6. Atracción disponible para visitantes"
+        ]
+      }
+    }
+  ],
+  
+  "visitantes": [
+    {
+      "nombre": "Ana Torres",
+      "cedula": "1001",
+      "edad": 25,
+      "estatura": 1.65,
+      "saldoInicial": 150000,
+      "puntosIniciales": 150,
+      "atraccionesCompatibles": ["Todas"]
+    },
+    {
+      "nombre": "Carlos Ruiz",
+      "cedula": "1002",
+      "edad": 30,
+      "estatura": 1.78,
+      "saldoInicial": 120000,
+      "puntosIniciales": 200,
+      "atraccionesCompatibles": ["Todas"]
+    },
+    {
+      "nombre": "Laura Díaz",
+      "cedula": "1003",
+      "edad": 22,
+      "estatura": 1.60,
+      "saldoInicial": 100000,
+      "puntosIniciales": 100,
+      "atraccionesCompatibles": ["Todas"]
+    },
+    {
+      "nombre": "Miguel Ángel",
+      "cedula": "1004",
+      "edad": 28,
+      "estatura": 1.82,
+      "saldoInicial": 180000,
+      "puntosIniciales": 180,
+      "atraccionesCompatibles": ["Todas"]
+    },
+    {
+      "nombre": "Sofía Morales",
+      "cedula": "1005",
+      "edad": 19,
+      "estatura": 1.58,
+      "saldoInicial": 90000,
+      "puntosIniciales": 120,
+      "atraccionesCompatibles": ["Todas"]
+    },
+    {
+      "nombre": "Diego Castro",
+      "cedula": "1006",
+      "edad": 35,
+      "estatura": 1.75,
+      "saldoInicial": 200000,
+      "puntosIniciales": 250,
+      "atraccionesCompatibles": ["Todas"]
+    },
+    {
+      "nombre": "Valentina López",
+      "cedula": "1007",
+      "edad": 8,
+      "estatura": 1.20,
+      "saldoInicial": 50000,
+      "puntosIniciales": 80,
+      "atraccionesCompatibles": ["Tobogán Acuático", "Piscina de Olas", "Carrusel Mágico"]
+    },
+    {
+      "nombre": "Andrés Vargas",
+      "cedula": "1008",
+      "edad": 40,
+      "estatura": 1.70,
+      "saldoInicial": 160000,
+      "puntosIniciales": 300,
+      "atraccionesCompatibles": ["Todas"]
+    }
+  ],
+  
+  "sistemaMantenimiento": {
+    "descripcion": "Sistema automático de mantenimiento preventivo",
+    "limiteVisitas": 500,
+    "funcionamiento": {
+      "paso1": "Cada vez que un visitante ingresa, se llama atraccion.registrarIngreso()",
+      "paso2": "El contador contadorVisitantes se incrementa en 1",
+      "paso3": "Se ejecuta ejecutarMantenimientoAutomatico()",
+      "paso4": "Si contadorVisitantes >= 500, estado cambia a EN_MANTENIMIENTO",
+      "paso5": "La atracción queda bloqueada hasta revisión técnica"
+    },
+    "mantenimientoManual": {
+      "quien": "Administrador",
+      "donde": "Tab 'Gestión de Atracciones' en AdminView",
+      "accion": "Seleccionar atracción + Botón 'Poner en Mantenimiento'",
+      "resultado": "Estado cambia a EN_MANTENIMIENTO sin esperar 500 visitas",
+      "uso": "Para mantenimiento preventivo o reparaciones urgentes"
+    },
+    "revisionTecnica": {
+      "quien": "Operador asignado a la atracción",
+      "donde": "Tab 'Mantenimiento' en OperadorView",
+      "accion": "Botón 'Registrar Revisión Técnica'",
+      "resultado": [
+        "Estado cambia a ACTIVA",
+        "Contador se reinicia a 0",
+        "Atracción disponible nuevamente"
+      ]
+    },
+    "datosQuemados": {
+      "atraccion": "Rueda de la Fortuna",
+      "visitasActuales": 498,
+      "visitasFaltantes": 2,
+      "descripcion": "Esta atracción está cerca del límite. Después de 2 aprobaciones más, entrará automáticamente en mantenimiento."
+    },
+    "codigoJava": {
+      "clase": "Atraccion.java",
+      "metodos": [
+        "registrarIngreso() - Incrementa contador y verifica límite",
+        "ejecutarMantenimientoAutomatico() - Cambia estado si contador >= 500"
+      ]
+    },
+    "ejemploPractico": {
+      "escenario": "Rueda de la Fortuna alcanza 500 visitas",
+      "pasos": [
+        "Estado inicial: 498 visitas (datos quemados)",
+        "Visitante 499 solicita acceso -> Operador aprueba -> contador = 499",
+        "Visitante 500 solicita acceso -> Operador aprueba -> contador = 500, estado = EN_MANTENIMIENTO",
+        "Visitante 501 intenta solicitar -> DENEGADO (atracción en mantenimiento)",
+        "Operador María (Mecánica) ve la atracción en tab 'Mantenimiento'",
+        "Operador registra revisión -> estado = ACTIVA, contador = 0",
+        "Visitante 501 puede solicitar acceso ahora"
+      ]
+    },
+    "pruebaManual": {
+      "descripcion": "Probar mantenimiento manual sin esperar 500 visitas",
+      "pasos": [
+        "1. Login como Administrador",
+        "2. Tab 'Gestión de Atracciones'",
+        "3. Seleccionar 'Montaña Rusa Extrema'",
+        "4. Click 'Poner en Mantenimiento'",
+        "5. Cerrar sesión",
+        "6. Login como Operador OP002 (María - Mecánica)",
+        "7. Tab 'Mantenimiento' -> Ver Montaña Rusa",
+        "8. Seleccionar y click 'Registrar Revisión Técnica'",
+        "9. Atracción vuelve a ACTIVA"
+      ]
+    }
+  },
+
+  "sistemaAlertasClimaticas": {
+    "descripcion": "Sistema de alertas climáticas con notificaciones a visitantes",
+    "atraccionesAfectadas": [
+      "ACUATICA - Todas las atracciones acuáticas",
+      "MECANICA_ALTURA - Todas las atracciones mecánicas de altura"
+    ],
+    "funcionamiento": {
+      "activacion": {
+        "quien": "Administrador",
+        "donde": "Tab 'Control Climático'",
+        "accion": "Botón 'ACTIVAR ALERTA'",
+        "efectos": [
+          "Todas las atracciones ACUATICA pasan a estado CERRADO",
+          "Todas las atracciones MECANICA_ALTURA pasan a estado CERRADO",
+          "Se envía notificación a TODOS los visitantes registrados",
+          "Visitantes no pueden solicitar acceso a atracciones cerradas"
+        ]
+      },
+      "desactivacion": {
+        "quien": "Administrador",
+        "accion": "Botón 'DESACTIVAR ALERTA'",
+        "efectos": [
+          "Atracciones cerradas vuelven a estado ACTIVA",
+          "Se envía notificación de reapertura a todos los visitantes",
+          "Visitantes pueden solicitar acceso nuevamente"
+        ]
+      }
+    },
+    "notificaciones": {
+      "tipo": "ALERTA",
+      "mensaje": "ALERTA CLIMÁTICA: Tormenta detectada. Atracciones acuáticas y mecánicas cerradas por seguridad.",
+      "almacenamiento": "Lista notificaciones en cada Visitante",
+      "visualizacion": "Tab 'Notificaciones' en VisitanteView"
+    },
+    "bloqueoSolicitudes": {
+      "descripcion": "Visitantes no pueden solicitar acceso a atracciones CERRADAS",
+      "validacion": "VisitanteController.solicitarAccesoAtraccion() verifica estado",
+      "resultado": "Si estado = CERRADO -> DENEGADO con motivo 'Atracción CERRADA'"
+    }
+  },
+
+  "flujoFuncional": {
+    "descripcion": "Cómo funciona el sistema completo",
+    "pasos": [
+      {
+        "paso": 1,
+        "actor": "Visitante",
+        "accion": "Inicia sesión con su cédula",
+        "ejemplo": "Cédula: 1001 (Ana Torres)"
+      },
+      {
+        "paso": 2,
+        "actor": "Visitante",
+        "accion": "Compra tickets para obtener puntos",
+        "ejemplo": "Ticket General = 100 puntos, Familiar = 400 puntos"
+      },
+      {
+        "paso": 3,
+        "actor": "Visitante",
+        "accion": "Solicita acceso a una atracción usando puntos",
+        "ejemplo": "Montaña Rusa = 50 puntos"
+      },
+      {
+        "paso": 4,
+        "actor": "Sistema",
+        "accion": "Valida requisitos (edad, estatura, puntos) y crea solicitud EN_PROCESO",
+        "resultado": "Solicitud aparece en la cola del operador correspondiente"
+      },
+      {
+        "paso": 5,
+        "actor": "Operador",
+        "accion": "Inicia sesión con su cédula",
+        "ejemplo": "Cédula: OP002 (María González - Especialidad Mecánica)"
+      },
+      {
+        "paso": 6,
+        "actor": "Operador",
+        "accion": "Ve SOLO las atracciones de su especialidad en el filtro",
+        "ejemplo": "María solo ve: Montaña Rusa y Rueda de la Fortuna"
+      },
+      {
+        "paso": 7,
+        "actor": "Operador",
+        "accion": "Filtra solicitudes por atracción específica",
+        "ejemplo": "Selecciona 'Montaña Rusa' y ve solo visitantes para esa atracción"
+      },
+      {
+        "paso": 8,
+        "actor": "Operador",
+        "accion": "Aprueba o rechaza la solicitud",
+        "resultado": "Si aprueba: visitante ingresa. Si rechaza: devuelve puntos"
+      },
+      {
+        "paso": 9,
+        "actor": "Administrador",
+        "accion": "Gestiona operadores y atracciones",
+        "ejemplo": "Crea nueva atracción y la asigna a operador según especialidad"
+      }
+    ]
+  },
+  
+  "credencialesAcceso": {
+    "visitantes": {
+      "rol": "Visitante",
+      "cedulas": ["1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008"]
+    },
+    "operadores": {
+      "rol": "Operador",
+      "cedulas": ["OP001", "OP002", "OP003"],
+      "nota": "Cada operador solo ve atracciones de su especialidad"
+    },
+    "administradores": {
+      "rol": "Administrador",
+      "cedulas": ["ADMIN001"],
+      "usuario": "Carlos Mendoza",
+      "descripcion": "Acceso completo a todas las funciones del sistema"
+    }
+  },
+  
+  "caracteristicasImplementadas": [
+    "✅ Filtro por atracción en tiempo real para operadores",
+    "✅ Restricción por especialidad: operadores solo ven sus atracciones",
+    "✅ Dashboard de administrador con tabla de operadores y especialidades",
+    "✅ Asignación de operadores a atracciones al crearlas",
+    "✅ Sistema de solicitudes EN_PROCESO hasta aprobación del operador",
+    "✅ 3 operadores con especialidades diferentes",
+    "✅ 5 atracciones correctamente asignadas",
+    "✅ 8 visitantes con puntos iniciales para pruebas inmediatas"
+  ]
+}
