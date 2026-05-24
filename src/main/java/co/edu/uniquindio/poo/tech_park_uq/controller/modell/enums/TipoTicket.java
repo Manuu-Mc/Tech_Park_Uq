@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.tech_park_uq.controller.modell.interfaces;
+package co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums;
 
 public enum TipoTicket {
     NINGUNO("Sin Ticket", 0, 0, false),

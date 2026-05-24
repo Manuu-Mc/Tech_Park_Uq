@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.tech_park_uq.controller.modell.interfaces;
+package co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums;
 
 /**
  * Especialidades de los operadores del parque.
