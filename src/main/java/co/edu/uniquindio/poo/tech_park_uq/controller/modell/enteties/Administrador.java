@@ -1,7 +1,7 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties;
-import co.edu.uniquindio.poo.techparkuq.model.abstracts.Empleado;
-import co.edu.uniquindio.poo.techparkuq.model.enums.EstadoActual;
-import co.edu.uniquindio.poo.techparkuq.model.enums.TipoAtraccion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.abstracts.Empleado;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoActual;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoAtraccion;
 
 import java.util.ArrayList;
 import java.util.List;

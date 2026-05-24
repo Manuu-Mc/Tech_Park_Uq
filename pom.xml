@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                co.edu.uniquindio.poo.techparkuq/co.edu.uniquindio.poo.techparkuq.view.MainApp
+                                co.edu.uniquindio.poo.techparkuq/co.edu.uniquindio.poo.tech_park_uq.controller.view.MainApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

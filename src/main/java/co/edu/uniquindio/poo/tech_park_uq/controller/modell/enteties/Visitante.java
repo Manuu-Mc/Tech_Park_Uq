@@ -1,10 +1,10 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties;
 
-import co.edu.uniquindio.poo.techparkuq.model.abstracts.Persona;
-import co.edu.uniquindio.poo.techparkuq.model.enums.TipoTicket;
-import co.edu.uniquindio.poo.techparkuq.model.interfaces.INotificable;
-import co.edu.uniquindio.poo.techparkuq.model.records.Notificacion;
-import co.edu.uniquindio.poo.techparkuq.model.records.RegistroAcceso;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.abstracts.Persona;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoTicket;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.interfaces.INotificable;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.records.Notificacion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.records.RegistroAcceso;
 
 import java.util.ArrayList;
 import java.util.HashMap;

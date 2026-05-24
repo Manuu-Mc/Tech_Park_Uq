@@ -1,8 +1,8 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties;
 
-import co.edu.uniquindio.poo.techparkuq.model.enums.EstadoActual;
-import co.edu.uniquindio.poo.techparkuq.model.enums.TipoAtraccion;
-import co.edu.uniquindio.poo.techparkuq.model.interfaces.IValidable;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoActual;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoAtraccion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.interfaces.IValidable;
 
 import java.io.Serializable;
 

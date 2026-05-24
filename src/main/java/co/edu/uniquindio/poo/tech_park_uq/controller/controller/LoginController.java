@@ -1,9 +1,9 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.controller;
 
-import co.edu.uniquindio.poo.techparkuq.model.entities.Administrador;
-import co.edu.uniquindio.poo.techparkuq.model.entities.Operador;
-import co.edu.uniquindio.poo.techparkuq.model.entities.Visitante;
-import co.edu.uniquindio.poo.techparkuq.model.entities.Zona;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Administrador;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Operador;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Visitante;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Zona;
 import javafx.scene.control.Alert;
 
 import java.util.ArrayList;

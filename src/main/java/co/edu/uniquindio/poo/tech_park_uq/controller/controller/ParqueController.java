@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.controller;
 
-import co.edu.uniquindio.poo.techparkuq.model.entities.*;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.modell.records;
 
-import co.edu.uniquindio.poo.techparkuq.model.enums.TipoNotificacion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoNotificacion;
 
 import java.time.LocalDateTime;
 

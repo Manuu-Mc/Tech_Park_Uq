@@ -1,13 +1,13 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.controller;
 
-import co.edu.uniquindio.poo.techparkuq.model.entities.Atraccion;
-import co.edu.uniquindio.poo.techparkuq.model.entities.SolicitudAcceso;
-import co.edu.uniquindio.poo.techparkuq.model.entities.Visitante;
-import co.edu.uniquindio.poo.techparkuq.model.enums.EstadoAcceso;
-import co.edu.uniquindio.poo.techparkuq.model.enums.EstadoActual;
-import co.edu.uniquindio.poo.techparkuq.model.enums.TipoTicket;
-import co.edu.uniquindio.poo.techparkuq.model.records.Notificacion;
-import co.edu.uniquindio.poo.techparkuq.model.records.RegistroAcceso;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Atraccion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.SolicitudAcceso;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Visitante;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoAcceso;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoActual;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoTicket;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.records.Notificacion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.records.RegistroAcceso;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;

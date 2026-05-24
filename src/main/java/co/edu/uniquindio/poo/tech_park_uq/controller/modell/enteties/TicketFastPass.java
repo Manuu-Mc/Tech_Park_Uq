@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties;
 
-import co.edu.uniquindio.poo.techparkuq.model.abstracts.Ticket;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.abstracts.Ticket;
 
 public class TicketFastPass extends Ticket {
 
