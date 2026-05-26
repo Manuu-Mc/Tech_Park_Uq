@@ -14,8 +14,8 @@ module co.edu.uniquindio.poo.techparkuq {
     opens co.edu.uniquindio.poo.tech_park_uq.controller.controller to javafx.fxml;
 
     // MODEL
-    exports co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties;
-    opens co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties to javafx.base;
+    exports co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities;
+    opens co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities to javafx.base;
     exports co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums;
     opens co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums to javafx.base;
     exports co.edu.uniquindio.poo.tech_park_uq.controller.modell.interfaces;

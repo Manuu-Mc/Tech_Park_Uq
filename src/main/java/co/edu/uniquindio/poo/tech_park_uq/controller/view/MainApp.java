@@ -4,7 +4,7 @@ package co.edu.uniquindio.poo.tech_park_uq.controller.view;
 
 import co.edu.uniquindio.poo.tech_park_uq.controller.controller.ParqueController;
 
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.*;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.*;
 
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EspecialidadOperador;
 

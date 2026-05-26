@@ -1,7 +1,7 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.controller;
 
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.abstracts.Empleado;
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.*;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.*;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EspecialidadOperador;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoActual;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoAtraccion;

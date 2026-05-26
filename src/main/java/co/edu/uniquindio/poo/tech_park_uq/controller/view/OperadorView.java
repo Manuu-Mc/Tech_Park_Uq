@@ -6,11 +6,11 @@ import co.edu.uniquindio.poo.tech_park_uq.controller.controller.OperadorControll
 
 import co.edu.uniquindio.poo.tech_park_uq.controller.controller.ParqueController;
 
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Atraccion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Atraccion;
 
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Operador;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Operador;
 
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.SolicitudAcceso;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.SolicitudAcceso;
 
 import javafx.beans.property.SimpleStringProperty;
 

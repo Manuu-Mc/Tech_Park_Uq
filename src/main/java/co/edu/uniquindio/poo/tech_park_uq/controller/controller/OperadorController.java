@@ -1,9 +1,9 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.controller;
 
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Atraccion;
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Operador;
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.SolicitudAcceso;
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Visitante;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Atraccion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Operador;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.SolicitudAcceso;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Visitante;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoAcceso;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoActual;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.records.RegistroAcceso;

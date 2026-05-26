@@ -6,9 +6,9 @@ import co.edu.uniquindio.poo.tech_park_uq.controller.controller.ParqueController
 
 import co.edu.uniquindio.poo.tech_park_uq.controller.controller.VisitanteController;
 
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Atraccion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Atraccion;
 
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Visitante;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Visitante;
 
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoAcceso;
 

@@ -1,8 +1,8 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.controller;
 
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Atraccion;
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.SolicitudAcceso;
-import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enteties.Visitante;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Atraccion;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.SolicitudAcceso;
+import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Visitante;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoAcceso;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoActual;
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoTicket;
@@ -370,7 +370,8 @@ public class VisitanteController {
     }
     
     public ObservableList<Atraccion> getAtraccionesDisponibles() {
-        return atraccionesDisponibles;
+        // Retorna la lista actualizada del ParqueController
+        return FXCollections.observableArrayList(parqueController.getAtracciones());
     }
     
     public ObservableList<Atraccion> getAtraccionesFavoritas() {
@@ -386,10 +387,20 @@ public class VisitanteController {
     }
     
     private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
-        Alert alert = new Alert(tipo);
-        alert.setTitle(titulo);
-        alert.setHeaderText(null);
-        alert.setContentText(mensaje);
-        alert.showAndWait();
+        try {
+            // Solo muestra alerta si estamos en el thread de JavaFX
+            if (javafx.application.Platform.isFxApplicationThread()) {
+                Alert alert = new Alert(tipo);
+                alert.setTitle(titulo);
+                alert.setHeaderText(null);
+                alert.setContentText(mensaje);
+                alert.showAndWait();
+            }
+            // En tests o fuera del thread FX, solo imprime a consola
+            System.out.println("[" + tipo + "] " + titulo + ": " + mensaje);
+        } catch (Exception e) {
+            // Si JavaFX no está inicializado, solo imprime a consola
+            System.out.println("[" + tipo + "] " + titulo + ": " + mensaje);
+        }
     }
 }
