@@ -1718,13 +1718,15 @@ public class VisitanteView {
 
                 } else {
 
-                    setText(item + " min");
+                    // Si tiene Fast Pass, mostrar 0 min (prioridad inmediata)
+                    int tiempoMostrado = controller.getVisitante().tieneFastPass() ? 0 : item;
+                    setText(tiempoMostrado + " min");
 
-                    if (item == 0) {
+                    if (tiempoMostrado == 0) {
 
                         setStyle("-fx-text-fill: #2E7D32; -fx-font-weight: 700; -fx-alignment: CENTER;");
 
-                    } else if (item <= 10) {
+                    } else if (tiempoMostrado <= 10) {
 
                         setStyle("-fx-text-fill: #EF6C00; -fx-font-weight: 700; -fx-alignment: CENTER;");
 
@@ -2420,13 +2422,15 @@ public class VisitanteView {
 
                 } else {
 
-                    setText(item + " min");
+                    // Si tiene Fast Pass, mostrar 0 min (prioridad inmediata)
+                    int tiempoMostrado = controller.getVisitante().tieneFastPass() ? 0 : item;
+                    setText(tiempoMostrado + " min");
 
-                    if (item == 0) {
+                    if (tiempoMostrado == 0) {
 
                         setStyle("-fx-text-fill: #2E7D32; -fx-font-weight: 700; -fx-alignment: CENTER;");
 
-                    } else if (item <= 10) {
+                    } else if (tiempoMostrado <= 10) {
 
                         setStyle("-fx-text-fill: #EF6C00; -fx-font-weight: 700; -fx-alignment: CENTER;");
 

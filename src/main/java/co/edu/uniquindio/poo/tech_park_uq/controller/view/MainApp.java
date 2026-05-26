@@ -322,10 +322,9 @@ public class MainApp extends Application {
 
 
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
-
         launch(args);
-
     }
 
 }
