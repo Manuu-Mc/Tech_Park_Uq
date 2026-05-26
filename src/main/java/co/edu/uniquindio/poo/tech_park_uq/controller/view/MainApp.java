@@ -1,54 +1,29 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.view;
 
-
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.controller.ParqueController;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.*;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EspecialidadOperador;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EstadoActual;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoAtraccion;
-
 import javafx.application.Application;
-
 import javafx.stage.Stage;
 
 
 
 public class MainApp extends Application {
 
-
-
-    private ParqueController parqueController;
-
-
-
     @Override
-
     public void start(Stage stage) {
-
-        parqueController = new ParqueController();
-
-        cargarDatosPrueba();
-
-
+        ParqueController parqueController = new ParqueController();
+        cargarDatosPrueba(parqueController);
 
         LoginView loginView = new LoginView(stage, parqueController);
-
         stage.setTitle("Tech-Park UQ");
-
         stage.setScene(loginView.crearEscena());
-
         stage.show();
-
     }
 
-
-
-    private void cargarDatosPrueba() {
+    private void cargarDatosPrueba(ParqueController parqueController) {
 
         // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 

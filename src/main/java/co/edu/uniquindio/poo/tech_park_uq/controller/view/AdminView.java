@@ -1,45 +1,23 @@
 package co.edu.uniquindio.poo.tech_park_uq.controller.view;
 
-
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.controller.AdminController;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.controller.ParqueController;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Administrador;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Atraccion;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Operador;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.entities.Zona;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.EspecialidadOperador;
-
 import co.edu.uniquindio.poo.tech_park_uq.controller.modell.enums.TipoAtraccion;
-
 import javafx.beans.property.SimpleStringProperty;
-
 import javafx.geometry.Insets;
-
 import javafx.scene.Scene;
-
 import javafx.scene.control.*;
-
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import javafx.scene.layout.BorderPane;
-
 import javafx.scene.layout.GridPane;
-
 import javafx.scene.layout.HBox;
-
 import javafx.scene.layout.VBox;
-
 import javafx.stage.Stage;
-
-
-
 import java.util.List;
 
 

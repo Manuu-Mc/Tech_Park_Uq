@@ -95,18 +95,6 @@ public class Visitante extends Persona implements INotificable {
         return false;
     }
 
-    public void comprarTicketVirtual(){
-
-    }
-
-    public void consultarMapaParque(){
-
-    }
-
-    public void consultarTiempoEspera(){
-
-    }
-
     public void registrarAtraccionFavorita(Atraccion atraccion){
         if (!favoritos.contains(atraccion)) {
             favoritos.add(atraccion);

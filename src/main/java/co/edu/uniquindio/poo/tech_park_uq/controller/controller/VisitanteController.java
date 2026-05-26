@@ -15,13 +15,13 @@ import javafx.scene.control.Alert;
 import java.time.LocalDateTime;
 
 public class VisitanteController {
-    
-    private Visitante visitante;
-    private ParqueController parqueController;
-    private ObservableList<Atraccion> atraccionesDisponibles;
-    private ObservableList<Atraccion> atraccionesFavoritas;
-    private ObservableList<Notificacion> notificaciones;
-    private ObservableList<RegistroAcceso> historialAccesos;
+
+    private final Visitante visitante;
+    private final ParqueController parqueController;
+    private final ObservableList<Atraccion> atraccionesDisponibles;
+    private final ObservableList<Atraccion> atraccionesFavoritas;
+    private final ObservableList<Notificacion> notificaciones;
+    private final ObservableList<RegistroAcceso> historialAccesos;
     
     public VisitanteController(Visitante visitante, ParqueController parqueController) {
         this.visitante = visitante;
@@ -309,17 +309,15 @@ public class VisitanteController {
     }
     
     public void consultarMapaParque() {
-        visitante.consultarMapaParque();
-        mostrarAlerta("Mapa del Parque", 
-            "Mostrando todas las atracciones disponibles", 
+        mostrarAlerta("Mapa del Parque",
+            "Mostrando todas las atracciones disponibles",
             Alert.AlertType.INFORMATION);
     }
     
     public void consultarTiempoEspera(Atraccion atraccion) {
         if (atraccion != null) {
-            visitante.consultarTiempoEspera();
-            mostrarAlerta("Tiempo de Espera", 
-                "Tiempo estimado: 15 minutos", 
+            mostrarAlerta("Tiempo de Espera",
+                "Tiempo estimado: " + atraccion.getTiempoEspera() + " minutos",
                 Alert.AlertType.INFORMATION);
         }
     }
